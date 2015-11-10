@@ -1,0 +1,30 @@
+noticia:
+    path:     /
+    defaults: { _controller: "BufeteAplicacionBundle:Noticia:index" }
+
+noticia_show:
+    path:     /{id}/show
+    defaults: { _controller: "BufeteAplicacionBundle:Noticia:show" }
+
+noticia_new:
+    path:     /new
+    defaults: { _controller: "BufeteAplicacionBundle:Noticia:new" }
+
+noticia_create:
+    path:     /create
+    defaults: { _controller: "BufeteAplicacionBundle:Noticia:create" }
+    requirements: { _method: post }
+
+noticia_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BufeteAplicacionBundle:Noticia:edit" }
+
+noticia_update:
+    path:     /{id}/update
+    defaults: { _controller: "BufeteAplicacionBundle:Noticia:update" }
+    requirements: { _method: post|put }
+
+noticia_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BufeteAplicacionBundle:Noticia:delete" }
+    requirements: { _method: post|delete }

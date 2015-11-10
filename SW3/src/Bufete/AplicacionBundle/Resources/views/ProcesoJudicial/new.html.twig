@@ -1,0 +1,23 @@
+{% extends 'BufeteAplicacionBundle::Default/admin.html.twig' %}
+{% block stylesheet %}
+
+        {{ parent() }}
+        
+        <style>
+            
+        
+            
+        </style>
+{% endblock%}
+{% block page %}
+    <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8;height: 100%;">
+        <h1 class="titulo">Creacion de ProcesoJudicial</h1>
+
+        <div class="contenedor_formulario">
+            
+            {{ form(form) }}
+            <a href="{{ path('procesojudicial') }}"> Ver la lista </a>
+
+        </div>        
+    </div>
+{% endblock %}

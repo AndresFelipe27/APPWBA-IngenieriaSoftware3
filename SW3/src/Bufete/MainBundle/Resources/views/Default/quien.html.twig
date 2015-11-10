@@ -1,0 +1,58 @@
+{% extends '::sidebarderecha.html.twig' %}
+
+{% block header %}
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+                                            <a href="#"><img src="{{asset('public/images/lo.png')}}"/></a>
+					</div>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'home' }) }} ">Home</a></li>
+							<li class="active"><a href=" {{ path('bufete_main_homepage', { 'pagina': 'quien' }) }}">Quienes Somos</a></li>
+                                                        <li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'noticias' }) }}">Noticias</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'asesorias' }) }}">Asesorias en Linea</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'micaso' }) }}">Mi caso</a></li>
+						</ul>
+					</nav>
+
+			</div>
+		</div>
+	<!-- Header -->
+        {% endblock %}
+
+
+
+{%block titulo%}
+    <h2>Grupo Juridico AC&O</h2>
+{%endblock%}
+
+{%block subtitulo%}
+    ALVAREZ, CARDONA & OCAMPO
+{%endblock%}
+
+{%block s1%}
+    <h2>Areas de Trabajo</h2>
+{%endblock%}
+
+{%block lista1%}
+    <li><a href="#">Administración de Justicia</a></li>
+    <li><a href="#">Asesorías Jurídicas de Empresariales</a></li>
+    <li><a href="#">Derecho Administrativo y Administración Pública</a></li>
+    <li><a href="#">Derecho Ambiental</a></li>
+    <li><a href="#">Derecho de Familia</a></li>
+    <li><a href="#">Derecho Informático</a></li>
+    <li><a href="#">Derechos Humanos</a></li>
+    <li><a href="#">Derecho Penal</a></li>
+    <li><a href="#">Derecho Procesal Civil</a></li>
+    <li><a href="#">Elaboración de Normas Jurídicas</a></li>
+    <li><a href="#">Ministerio Público</a></li>
+    <li><a href="#">Derecho Constitucional</a></li>
+    
+{%endblock%}
+
+

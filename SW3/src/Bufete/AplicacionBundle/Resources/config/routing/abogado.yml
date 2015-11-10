@@ -1,0 +1,30 @@
+abogado:
+    path:     /
+    defaults: { _controller: "BufeteAplicacionBundle:Abogado:index" }
+
+abogado_show:
+    path:     /{id}/show
+    defaults: { _controller: "BufeteAplicacionBundle:Abogado:show" }
+
+abogado_new:
+    path:     /new
+    defaults: { _controller: "BufeteAplicacionBundle:Abogado:new" }
+
+abogado_create:
+    path:     /create
+    defaults: { _controller: "BufeteAplicacionBundle:Abogado:create" }
+    requirements: { _method: post }
+
+abogado_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BufeteAplicacionBundle:Abogado:edit" }
+
+abogado_update:
+    path:     /{id}/update
+    defaults: { _controller: "BufeteAplicacionBundle:Abogado:update" }
+    requirements: { _method: post|put }
+
+abogado_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BufeteAplicacionBundle:Abogado:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,14 @@
+{% extends 'BufeteAplicacionBundle::Default/admin.html.twig' %}
+
+{% block page%}
+    <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8; height: 550px;">
+        <h1 class="titulo">Creacion de Cliente</h1>
+
+        <div class="contenedor_formulario">
+            
+            {{ form(form) }}
+            <a href="{{ path('cliente') }}"> Ver la lista de Clientes</a>
+
+        </div>        
+    </div>
+{% endblock %}

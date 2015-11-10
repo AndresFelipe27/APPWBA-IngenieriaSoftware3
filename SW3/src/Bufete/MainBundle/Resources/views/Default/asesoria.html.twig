@@ -1,0 +1,136 @@
+{% extends '::index.html.twig' %}
+        
+
+                {% block stylesheet %}
+                     {{ parent() }}
+			<link rel="stylesheet" href="{{asset('public/css/micaso.css')}}" />
+                        
+                        <style>
+                            .form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  width: 285px;
+  margin: -140px 0 0 -182px;
+  padding: 40px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.form h2 {
+  margin: 0 0 20px;
+  line-height: 1;
+  color:#92664C;
+  font-size: 18px;
+  font-weight: 400;
+}
+.in, textarea {
+  outline: none;
+  display: block;
+  width: 100% !important;
+  margin: 0 0 20px !important;
+  padding: 10px 15px !important ;
+  border: 1px solid #ccc !important;
+  color: #ccc;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important ;
+  box-sizing: border-box !important;
+  font-size: 14px !important;
+  font-wieght: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+.in:focus , textarea:focus{
+  color: #333;
+  border: 1px solid #44c4e7;
+}
+.boton {
+  cursor: pointer ;
+  width: 85%!important;
+ 
+
+}
+
+
+                            
+                            
+                        </style>
+                            
+			
+                {% endblock %}
+
+
+    {% block header %}
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+                                            <a href="#"><img src="{{asset('public/images/lo.png')}}"/></a>
+					</div>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'home' }) }} ">Home</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'quien' }) }}">Quienes Somos</a></li>
+                                                        <li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'noticias' }) }}">Noticias</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'asesorias' }) }}">Asesorias en Linea</a></li>
+							<li class="active"><a href=" {{ path('bufete_main_homepage', { 'pagina': 'micaso' }) }}">Mi caso</a></li>
+						</ul>
+					</nav>
+
+			</div>
+		</div>
+	<!-- Header -->
+        {% endblock %}
+
+
+
+        {% block banner %}
+        {%endblock%}
+
+        
+        
+        {% block page%}
+	
+        		
+				
+			<!-- Main -->
+			<div id="micaso" class="fullsize"  style="  background-color: #92664C;height: 550px;">
+				
+                          
+                         <div class="form animated flipInX">
+                            <h2>Deja tu Pregunta</h2>
+                            <form method="post" action="{{ path('vercaso') }}">
+                              <input class="in" placeholder="Nombre Completo" type="text" name="nombre"/>
+                              <input class="in" placeholder="Correo" type="text" name="correo"/>
+                              <input class="in" placeholder="Telefono" type="text" name="telefono"/>
+                              <textarea placeholder="Pregunta" type="text" name="pregunta"></textarea>
+                              <input class="boton" type="submit" name="enviar" value="Enviar"/>
+                          </form>
+                         </div>
+                            
+                            
+                            
+                            
+			</div>
+			<!-- Main -->
+
+                        
+	<!-- /Main -->
+
+	
+        
+        {% endblock%}
+      
+        
+        
+        {% block footer%}
+        {% endblock%}
+
+	

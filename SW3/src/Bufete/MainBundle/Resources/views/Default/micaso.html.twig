@@ -1,0 +1,75 @@
+{% extends '::index.html.twig' %}
+        
+
+                {% block stylesheet %}
+                     {{ parent() }}
+			<link rel="stylesheet" href="{{asset('public/css/micaso.css')}}" />
+			
+                {% endblock %}
+
+
+    {% block header %}
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+                                            <a href="#"><img src="{{asset('public/images/lo.png')}}"/></a>
+					</div>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'home' }) }} ">Home</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'quien' }) }}">Quienes Somos</a></li>
+                                                        <li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'noticias' }) }}">Noticias</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'asesorias' }) }}">Asesorias en Linea</a></li>
+							<li class="active"><a href=" {{ path('bufete_main_homepage', { 'pagina': 'micaso' }) }}">Mi caso</a></li>
+						</ul>
+					</nav>
+
+			</div>
+		</div>
+	<!-- Header -->
+        {% endblock %}
+
+
+
+        {% block banner %}
+        {%endblock%}
+
+        
+        
+        {% block page%}
+	
+        		
+				
+			<!-- Main -->
+			<div id="micaso" class="fullsize"  style="  background-color: #92664C;height: 550px;">
+				
+                           <div class="login">
+                            <h1>Ingrese el codigo de su caso</h1>
+                            <form method="post" action="{{ path('vercaso') }}">
+                                <div style="text-align: center">
+                                    <p><input type="password" name="codigo" value="" placeholder="Codigo"></p>
+                                    <p class="submit"><input type="submit" name="commit" value="Ingresar"></p>
+                                </div>
+                            </form>
+                          </div>
+                            
+			</div>
+			<!-- Main -->
+
+                        
+	<!-- /Main -->
+
+	
+        
+        {% endblock%}
+      
+        
+        
+        {% block footer%}
+        {% endblock%}
+
+	

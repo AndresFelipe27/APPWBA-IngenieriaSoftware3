@@ -1,0 +1,36 @@
+bufete_aplicacion_noticia:
+    resource: "@BufeteAplicacionBundle/Resources/config/routing/noticia.yml"
+    prefix:   /noticia
+
+bufete_aplicacion_procesojudicial:
+    resource: "@BufeteAplicacionBundle/Resources/config/routing/procesojudicial.yml"
+    prefix:   /procesojudicial
+
+bufete_aplicacion_documento:
+    resource: "@BufeteAplicacionBundle/Resources/config/routing/documento.yml"
+    prefix:   /documento
+
+bufete_aplicacion_cliente:
+    resource: "@BufeteAplicacionBundle/Resources/config/routing/cliente.yml"
+    prefix:   /cliente
+
+bufete_aplicacion_abogado:
+    resource: "@BufeteAplicacionBundle/Resources/config/routing/abogado.yml"
+    prefix:   /abogado
+    
+actualizar:
+    path:     /actualizar
+    defaults: { _controller: "BufeteAplicacionBundle:Default:actualizar"}
+
+actualizar_estado:
+    path:     /actualizar/estado
+    defaults: { _controller: "BufeteAplicacionBundle:Default:actualizarEstado"}
+    requirements: { _method: post }
+
+
+
+   
+
+
+   
+

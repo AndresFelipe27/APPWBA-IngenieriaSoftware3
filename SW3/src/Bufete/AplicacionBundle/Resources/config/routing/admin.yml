@@ -1,0 +1,10 @@
+admin:
+    path:     /{name}
+    defaults: { _controller: "BufeteAplicacionBundle:Admin:index" }
+
+admin_show:
+    path:     /{id}/show
+    defaults: { _controller: "BufeteAplicacionBundle:Admin:show" }
+
+
+

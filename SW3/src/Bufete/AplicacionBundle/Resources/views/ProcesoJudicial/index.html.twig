@@ -1,0 +1,109 @@
+{% extends 'BufeteAplicacionBundle::Default/admin.html.twig' %}
+
+
+                
+                
+{% block stylesheet %}
+   
+        
+        {{ parent() }}
+      <style>   
+        
+        .item_cliente {
+            margin-bottom: 10px;
+            background-color: #e9eaed;
+            -webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow:    0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+            box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            text-align: left;
+            padding: 8px;
+            font-size: 20px;
+
+        }
+        
+        .opcion{
+            position: relative;
+            left: 650px;
+        }
+        
+        
+        .item_cliente img{
+            
+                position: relative;
+                right: 100px;
+        }
+       
+        a{
+            
+           text-decoration: none; 
+        }
+        
+        .item_cliente h2{
+            color: black;
+            position: relative;
+            right: 75px;
+            bottom: 32px;
+        }
+        
+        .item_cliente h3{
+            color: #92664C;
+            position: relative;
+            font-size: medium;   
+            top: -20px;
+        }
+        
+        .item_cliente h4{
+            
+                font-size: medium;
+                position: relative;
+                top: -20px;
+        }
+        #abogado{
+            top: 0px;
+        }
+        #estado{
+            
+        }
+       
+    </style>
+{% endblock %}
+
+
+
+{% block page%}
+    <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8;height: 100%;">
+        
+        
+        <div id="contenedor">
+        {% for entity in entities %}
+            
+            
+            <a href="{{path('procesojudicial_show', { 'id': entity.id }) }}"> <div class= 'item_cliente' > <img style="width: 50px;" src="{{asset('public/images/documento.png')}}" /> <h2 style="display: inline-block; margin-left: 25px; margin-right: 40px;"> {{ entity.titulo }}</h2> <h3 id="estado"> Estado:{{ entity.estado }} </h3> <h4> Descripcion: {{ entity.descripcion}} </h4> <h3 id="abogado">Abogado a Cargo: {{entity.abogado}}</h3> </div> </a>
+
+            
+            
+        {% endfor %}
+        
+        
+
+      
+        </div>
+        
+        
+        
+  
+  
+        <ul>
+        <li>
+
+            <a href="{{ path('procesojudicial_new') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/addcliente.png')}}"/> <div class="label">Agregar Proceso</div> </div> </a>
+            
+        </li>
+    </ul>
+    </div>
+                
+    {% endblock %}
+       

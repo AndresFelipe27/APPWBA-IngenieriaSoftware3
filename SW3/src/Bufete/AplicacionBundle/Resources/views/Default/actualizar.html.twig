@@ -1,0 +1,150 @@
+{% extends 'BufeteAplicacionBundle::Default/admin.html.twig' %}               
+{% block stylesheet %}     
+        {{ parent() }}
+      <style>   
+        
+        .item_cliente {
+            margin-bottom: 10px;
+            background-color: #e9eaed;
+            -webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+            -moz-box-shadow:    0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+            box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            text-align: left;
+            padding: 8px;
+            font-size: 20px;
+
+        }
+        
+        .opcion{
+            position: relative;
+            left: 650px;
+        }
+        
+        
+        .item_cliente img{
+            
+                position: relative;
+                right: 100px;
+        }
+       
+        a{
+            
+           text-decoration: none; 
+        }
+        
+        .item_cliente h2{
+            color: black;
+            position: relative;
+            right: 75px;
+            bottom: 32px;
+        }
+        
+        .item_cliente h3{
+            color: #92664C;
+            position: relative;
+            font-size: medium;   
+            top: -20px;
+        }
+        
+        .item_cliente h4{
+            
+                font-size: medium;
+                position: relative;
+                top: -20px;
+        }
+        #abogado{
+            top: 0px;
+        }
+        #estado{
+            
+        }
+        
+        .myButton {
+            -moz-box-shadow:inset 0px 1px 0px 0px #a6827e;
+            -webkit-box-shadow:inset 0px 1px 0px 0px #a6827e;
+            box-shadow:inset 0px 1px 0px 0px #a6827e;
+            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7d5d3b), color-stop(1, #634b30));
+            background:-moz-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+            background:-webkit-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+            background:-o-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+            background:-ms-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+            background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d5d3b', endColorstr='#634b30',GradientType=0);
+            background-color:#7d5d3b;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+            border-radius:3px;
+            border:1px solid #54381e;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-size:13px;
+            padding:0px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #4d3534;
+        }
+        
+        .myButton:active {
+                position:relative;
+                top:1px;
+        }
+
+        
+        .conten_estado{
+            
+            position: relative;
+            top: -50px;
+            left: 280px;
+            display: inline-block;
+        }
+    </style>
+{% endblock %}
+
+
+
+{% block page%}
+    <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8;height: 100%;">
+        
+        
+        <div id="contenedor" style=" ">
+        {% for entity in entities %}
+            
+            
+            <a href="{{path('procesojudicial_show', { 'id': entity.id }) }}"> <div class= 'item_cliente' style="" > <img style="width: 50px;" src="{{asset('public/images/documento.png')}}" /> <h2 style="display: inline-block; margin-left: 25px; margin-right: 40px;"> {{ entity.titulo }}</h2> <h3 id="estado"> Estado:{{ entity.estado }} </h3> <h4> Descripcion: {{ entity.descripcion}} </h4> <h3 id="abogado">Abogado a Cargo: {{entity.abogado}}</h3> </div> </a>
+            
+            <div class="conten_estado">
+                
+                <form method="post" action="{{ path('actualizar_estado') }}">
+                              <input style="width: 290px;" type="text" name="estado" value="" placeholder="Estado">
+                              <input class="myButton" type="submit" name="enviar" value="Actualizar Estado">
+                              <input  type="hidden" name="id" value="{{ entity.id }}">
+                </form>
+            
+            
+            </div>
+            
+        {% endfor %}
+        
+        
+
+      
+        </div>
+        
+        
+        
+  
+  
+        <ul>
+        <li>
+
+            <a href="{{ path('procesojudicial_new') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/addcliente.png')}}"/> <div class="label">Agregar Proceso</div> </div> </a>
+            
+        </li>
+    </ul>
+    </div>
+                
+    {% endblock %}
+       

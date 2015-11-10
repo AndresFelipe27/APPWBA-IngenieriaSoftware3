@@ -1,0 +1,4 @@
+services:
+#    bufete_aplicacion.example:
+#        class: Bufete\AplicacionBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

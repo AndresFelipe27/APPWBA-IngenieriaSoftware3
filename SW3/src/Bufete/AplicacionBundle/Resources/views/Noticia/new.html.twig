@@ -1,0 +1,23 @@
+{% extends 'BufeteAplicacionBundle::Default/admin.html.twig' %}
+{% block stylesheet %}
+
+        {{ parent() }}
+        
+        <style>
+            
+        
+            
+        </style>
+{% endblock%}
+{% block page %}
+    <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8;height: 550px;">
+        <h1 class="titulo">Redactar Noticia</h1>
+
+        <div class="contenedor_formulario">
+            
+            {{ form(form) }}
+            <a href="{{ path('noticia') }}"> Ver la lista </a>
+
+        </div>        
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+procesojudicial:
+    path:     /
+    defaults: { _controller: "BufeteAplicacionBundle:ProcesoJudicial:index" }
+
+procesojudicial_show:
+    path:     /{id}/show
+    defaults: { _controller: "BufeteAplicacionBundle:ProcesoJudicial:show" }
+
+procesojudicial_new:
+    path:     /new
+    defaults: { _controller: "BufeteAplicacionBundle:ProcesoJudicial:new" }
+
+procesojudicial_create:
+    path:     /create
+    defaults: { _controller: "BufeteAplicacionBundle:ProcesoJudicial:create" }
+    requirements: { _method: post }
+
+procesojudicial_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BufeteAplicacionBundle:ProcesoJudicial:edit" }
+
+procesojudicial_update:
+    path:     /{id}/update
+    defaults: { _controller: "BufeteAplicacionBundle:ProcesoJudicial:update" }
+    requirements: { _method: post|put }
+
+procesojudicial_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BufeteAplicacionBundle:ProcesoJudicial:delete" }
+    requirements: { _method: post|delete }

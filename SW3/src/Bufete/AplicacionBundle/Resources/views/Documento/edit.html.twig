@@ -1,0 +1,18 @@
+{% extends 'BufeteAplicacionBundle::Default/admin.html.twig' %}
+
+{% block page%}
+    <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8;height: 540px;">
+    <h1>Documento edit</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('documento') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+    </div>
+{% endblock %}

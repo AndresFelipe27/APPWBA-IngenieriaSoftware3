@@ -1,0 +1,76 @@
+{% extends 'BufeteAplicacionBundle::Default/admin.html.twig' %}
+
+{% block stylesheet %}     
+        {{ parent() }}
+      <style>
+          .conten_proceso{
+                margin-bottom: 10px;
+                background-color: #e9eaed;
+                -webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+                -moz-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+                box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                text-align: left;
+                padding: 8px;
+                font-size: 20px;
+                width: 600px;
+                margin: 0px auto;
+          }
+          
+          .titulo_proceso{
+              font-size: 25px;
+              margin-bottom: 25px;
+          }
+          
+          .conten_opciones{
+              
+                width: 600px;
+                margin: 0px auto;
+          }
+          
+          .conten_img {
+              
+              text-align: center;
+              margin-bottom: 15px;
+              
+          }
+          .conten_img img{
+              width: 80px;
+          }
+      </style>    
+{%endblock%}
+
+{% block page %}
+    <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8;height: 540px;">
+        <h1 style="    font-weight: 800;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 600px;
+    margin: 0px auto;">Proceso Judicial </h1>
+        
+
+    <div class="conten_proceso" >
+ 
+        <div class="conten_img"><img src="{{asset('public/images/documento.png')}}"/></div> 
+        <div> <h1 class="titulo_proceso">{{ entity.descripcion }}</h1>  </div> 
+        <div> <strong> Estado:  </strong>     {{ entity.estado }}</div>
+        <div> <strong> Prioridad:   </strong>        {{ entity.prioridad }}</div>
+        <div> <strong> Codigo Consulta:  </strong>        {{ entity.codigoConsulta }}</div>
+        <div> <strong> Codigo Unico:  </strong>       {{ entity.id }}   </div>
+        
+        <hr/>
+        <div>   <strong> Fecha Inicio  </strong>      {{ entity.fechaIn|date('Y-m-d') }}</div>
+        <div>   <strong> Fecha de Vencimiento  </strong>     {{ entity.fechaVencimiento|date('Y-m-d') }}</div>
+        <hr/>
+        <div>   <strong> Abogado:  </strong>     {{ entity.abogado }}</div>
+        <div>   <strong> Celular:   </strong>      {{ entity.abogado.celular }}</div>
+        <div>   <strong> Correo:   </strong>      {{ entity.abogado.correo }}</div>
+    </div>          
+
+
+    
+    </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'BufeteAplicacionBundle::Default/admin.html.twig' %}
+
+{% block page %}
+    <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8;height: 540px;">
+    <h1>Agregar un Abogado </h1>
+
+    
+    {{ form_start(form)}}
+    <div class="row">
+    {{ form_label(form.nombre) }}
+    {{ form_widget(form.nombre, { 'attr': {'class': 'campo'}  } ) }}
+    </div>
+    
+    <div class="row">
+    {{ form_label(form.apellido) }}
+    {{ form_widget(form.apellido, { 'attr': {'class': 'campo'}  } ) }}
+    </div>
+    
+    <div class="row">
+    {{ form_label(form.correo) }}
+    {{ form_widget(form.correo, { 'attr': {'class': 'campo'}  } ) }}
+    </div>
+    
+    <div class="row">
+    {{ form_label(form.celular) }}
+    {{ form_widget(form.celular, { 'attr': {'class': 'campo'}  } ) }}
+    </div>
+    
+    <div class="row">
+    {{ form_label(form.contrasena) }}  
+    {{ form_widget(form.contrasena, { 'attr': {'class': 'campo'}  } ) }}
+    </div>
+    
+    
+    {{ form_end(form)}}
+
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('abogado') }}">
+            Volver a la lista
+        </a>
+    </li>
+</ul>
+    </div>
+{% endblock %}

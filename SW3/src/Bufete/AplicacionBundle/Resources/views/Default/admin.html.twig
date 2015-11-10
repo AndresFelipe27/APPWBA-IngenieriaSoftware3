@@ -1,0 +1,111 @@
+{% extends 'BufeteMainBundle::Default/micaso.html.twig' %}
+
+
+                {% block stylesheet %}
+                     {{ parent() }}
+			<link rel="stylesheet" href="{{asset('public/css/micaso.css')}}" />
+			
+                        <style>
+                            
+                            .opcion{
+                                display: inline-block;
+                                width: 115px;
+                                height: 115px;
+                                background-color: #e9eaed;
+                                -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+                                -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+                                box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+                                -webkit-border-radius: 5px;
+                                -moz-border-radius: 5px;
+                                border-radius: 5px;
+                                text-align: center;
+                                padding: 10px;
+                                margin-right: 25px;
+                                margin-bottom: 35px;
+               
+                            } 
+                            
+                            .opcion img{
+                                width: 80px
+                            }
+                            
+                            
+                            #contenedor{
+                                    margin-left: 270px;
+                                    margin-right: 200px;
+                                    padding-top: 50px;
+                                    padding: 0 auto;
+                            }
+                            
+                            .label{
+                                background-color: #92664C;
+                                color: white;
+                                width: 119px;
+                                position: relative;
+                                -moz-border-radius-bottomright: 5px;
+                                -webkit-border-bottom-right-radius: 5px;
+                                border-bottom-right-radius: 5px;
+                                -moz-border-radius-bottomleft: 5px;
+                                -webkit-border-bottom-left-radius: 5px;
+                                border-bottom-left-radius: 5px;
+                                right: 12px;
+                            }
+                            
+                            .link{
+                                
+                            }
+                        </style>   
+                {% endblock %}
+
+                {% block header %}
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+                                            <a href="#"><img src="{{asset('public/images/lo.png')}}"/></a>
+					</div>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'home' }) }} ">William David Mesa Mejia</a></li>
+							
+                                                        <li class="active"><a href=" {{ path('bufete_main_homepage', { 'pagina': 'noticias' }) }}">Salir</a></li>
+							
+						</ul>
+					</nav>
+
+			</div>
+		</div>
+
+        {% endblock %}
+          {% block page%}
+            <div id="micaso" class="fullsize"  style="  background-color: #F0F0D8;height: 540px;">
+		
+                    
+                <div id="contenedor">
+                    
+                    <a href="{{ path('procesojudicial') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/documento.png')}}"/> <div class="label">Ver Procesos</div> </div> </a>
+                    <a href="{{ path('procesojudicial_new') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/masdocumento.png')}}"/> <div class="label">Agregar Proceso</div> </div> </a>
+                    <a href="{{ path('cliente') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/cliente.png')}}"/> <div class="label">Ver Clientes</div> </div> </a>
+                    <a href="{{ path('cliente_new') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/addcliente.png')}}"/> <div class="label">Agregar Cliente</div> </div> </a>
+ 
+                    <a href="{{ path('noticia') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/noticia.png')}}"/> <div class="label">Noticias</div> </div> </a>
+                    <a href="{{ path('noticia_new') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/addnoticia.png')}}"/> <div class="label">Redactar Noticia</div> </div> </a>
+                    <a href="{{ path('actualizar') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/actualizar.png')}}"/> <div class="label">Actualizar Estado</div> </div> </a>
+                    <a href="{{ path('procesojudicial') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/noti.png')}}"/> <div class="label">Notificar</div> </div> </a>
+                    
+                    <a href="{{ path('documento') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/doc.png')}}"/> <div class="label">Documentos</div> </div> </a>
+                    <a href="{{ path('procesojudicial') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/msg.png')}}"/> <div class="label">Responder MSG</div> </div> </a>
+                    <a href="{{ path('procesojudicial') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/ajustes.png')}}"/> <div class="label">Ajustes</div> </div> </a>
+                    <a href="{{ path('procesojudicial') }}" class="link"> <div class="opcion"> <img src="{{asset('public/images/ayuda.png')}}"/> <div class="label">Ayuda</div> </div> </a>
+                    
+                </div>  
+                    
+                            
+            </div>
+          {% endblock%}
+       
+        
+      

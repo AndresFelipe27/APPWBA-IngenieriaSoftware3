@@ -1,0 +1,30 @@
+cliente:
+    path:     /
+    defaults: { _controller: "BufeteAplicacionBundle:Cliente:index" }
+
+cliente_show:
+    path:     /{id}/show
+    defaults: { _controller: "BufeteAplicacionBundle:Cliente:show" }
+
+cliente_new:
+    path:     /new
+    defaults: { _controller: "BufeteAplicacionBundle:Cliente:new" }
+
+cliente_create:
+    path:     /create
+    defaults: { _controller: "BufeteAplicacionBundle:Cliente:create" }
+    requirements: { _method: post }
+
+cliente_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BufeteAplicacionBundle:Cliente:edit" }
+
+cliente_update:
+    path:     /{id}/update
+    defaults: { _controller: "BufeteAplicacionBundle:Cliente:update" }
+    requirements: { _method: post|put }
+
+cliente_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BufeteAplicacionBundle:Cliente:delete" }
+    requirements: { _method: post|delete }

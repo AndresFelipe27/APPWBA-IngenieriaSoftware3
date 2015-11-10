@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<!--
+	Ex Machina by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+{%block html%}
+<html>
+        {%block head%}
+	<head>
+		<title>{% block title %}Test Application{% endblock %}</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="{{asset('public/js/skel.min.js')}}"></script>
+		<script src="{{asset('public/js/skel-panels.min.js')}}"></script>
+		<script src="{{asset('public/js/init.js')}}"></script>
+                <script src="{{asset('public/js/jquery-1.11.3.min.js')}}"></script>
+		
+                {% block stylesheet %}
+
+			<link rel="stylesheet" href="{{asset('public/css/skel-noscript.css')}}" />
+			<link rel="stylesheet" href="{{asset('public/css/style.css')}}" />
+			<link rel="stylesheet" href="{{asset('public/css/style-desktop.css')}}" />
+                {% endblock %}
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+                
+                  
+                   
+	</head>
+        {% endblock%}
+        
+        {% block body%}
+	<body class="homepage">
+	<!-- Header -->
+            {% block header %}
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+                                            <a href="#"><img src="{{asset('public/images/lo.png')}}"/></a>
+					</div>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li class="active"><a href=" {{ path('bufete_main_homepage', { 'pagina': 'home' }) }} ">Home</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'quien' }) }}">Quienes Somos</a></li>
+                                                        <li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'noticias' }) }}">Noticias</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'asesorias' }) }}">Asesorias en Linea</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'micaso' }) }}">Mi caso</a></li>
+						</ul>
+					</nav>
+
+			</div>
+		</div>
+	<!-- Header -->
+        {% endblock %}
+        
+        
+        {% block banner %}
+            
+	<!-- Banner -->
+		<div id="banner">
+			<div class="container">
+			</div>
+		</div>
+	<!-- /Banner -->
+        {% endblock %}
+	
+        
+        <!-- Main -->
+                {% block page %}
+		<div id="page">
+
+                        {% block accesos%}
+			<!-- Extra -->
+			<div id="marketing" class="container">
+				<div class="row">
+					<div class="3u">
+						<section>
+							<header>
+								<h2>Feugiat Tempus</h2>
+							</header>
+							<p class="subtitle">In posuere eleifend odio. Quisque semper augue mattis maecenas ligula.</p>
+							<p><a href="#"><img src="{{asset('public/images/pics13.jpg')}}" alt=""></a></p>
+							<a href="#" class="button">More</a>
+						</section>
+					</div>
+					<div class="3u">
+						<section>
+							<header>
+								<h2>Maecenas lectus</h2>
+							</header>
+							<p class="subtitle">In posuere eleifend odio. Quisque semper augue mattis maecenas ligula.</p>
+							<p><a href="#"><img src="{{asset('public/images/pics14.jpg')}}" alt=""></a></p>
+							<a href="#" class="button">More</a>
+						</section>
+					</div>
+					<div class="3u">
+						<section>
+							<header>
+								<h2>Luctus lectus</h2>
+							</header>
+							<p class="subtitle">In posuere eleifend odio. Quisque semper augue mattis maecenas ligula.</p>
+							<p><a href="#"><img src="{{asset('public/images/pics15.jpg')}}" alt=""></a></p>
+							<a href="#" class="button">More</a>
+						</section>
+					</div>
+					<div class="3u">
+						<section>
+							<header>
+								<h2>Posuere eleifend</h2>
+							</header>
+							<p class="subtitle">In posuere eleifend odio. Quisque semper augue mattis maecenas ligula.</p>
+							<p><a href="#"><img src="{{asset('public/images/pics16.jpg')}}" alt=""></a></p>
+							<a href="#" class="button">More</a>
+						</section>
+					</div>
+				</div>
+			</div>
+			<!-- /Extra -->
+			{% endblock%}
+                        
+                        
+                        {% block main %}
+			<!-- Main -->
+			<div id="main" class="container">
+				<div class="row">
+					<div class="6u">
+						<section>
+							<header>
+								<h2>Integer gravida nibh quis urna</h2>
+								<span class="byline">Augue praesent a lacus at urna congue rutrum</span>
+							</header>
+							<p>This is <strong>Ex Machina</strong>, a responsive HTML5 site template freebie by <a href="http://templated.co">TEMPLATED</a>. Released for free under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so use it for whatever (personal or commercial) &ndash; just give us credit! Check out more of our stuff at <a href="http://templated.co">our site</a> or follow us on <a href="http://twitter.com/templatedco">Twitter</a>.</p>
+							<p>Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl. Fusce mattis viverra elit. Fusce quis tortor. Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget lorem ipsum dolor. Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat. Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat.</p>
+							<p>Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl. Fusce mattis viverra elit. Fusce quis tortor. Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget lorem ipsum dolor. Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat. Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat.</p>
+							<a href="#" class="button">More Details</a>
+						</section>
+					</div>
+					<div class="3u">
+						<section class="sidebar">
+							<header>
+								<h2>Feugiat Tempus</h2>
+							</header>
+							<ul class="style2">
+								<li>
+									<a href="#"><img src="{{asset('public/images/pics07.jpg')}}" alt=""></a>
+									<p>Donec leo, vivamus fermentum augue praesent a lacus at urna rutrum.</p>
+								</li>
+								<li>
+									<a href="#"><img src="{{asset('public/images/pics08.jpg')}}" alt=""></a>
+									<p>Donec leo, vivamus fermentum augue praesent a lacus at urna rutrum.</p>
+								</li>
+								<li>
+									<a href="#"><img src="{{asset('public/images/pics09.jpg')}}" alt=""></a>
+									<p>Donec leo, vivamus fermentum augue praesent a lacus at urna rutrum.</p>
+								</li>
+								<li>
+									<a href="#"><img src="{{asset('public/images/pics10.jpg')}}" alt=""></a>
+									<p>Donec leo, vivamus fermentum augue praesent a lacus at urna rutrum.</p>
+								</li>
+							</ul>						
+						</section>
+					</div>
+					<div class="3u">
+						<section class="sidebar">
+							<header>
+								<h2>Feugiat Tempus</h2>
+							</header>
+							<ul class="style1">
+								<li><a href="#">Maecenas luctus lectus at sapien</a></li>
+								<li><a href="#">Etiam rhoncus volutpat erat</a></li>
+								<li><a href="#">Donec dictum metus in sapien</a></li>
+								<li><a href="#">Nulla luctus eleifend purus</a></li>
+								<li><a href="#">Maecenas luctus lectus at sapien</a></li>
+							</ul>
+						</section>
+						<section class="sidebar">
+							<header>
+								<h2>Nulla luctus eleifend</h2>
+							</header>
+							<ul class="style1">
+								<li><a href="#">Maecenas luctus lectus at sapien</a></li>
+								<li><a href="#">Donec dictum metus in sapien</a></li>
+								<li><a href="#">Integer gravida nibh quis urna</a></li>
+								<li><a href="#">Etiam posuere augue sit amet nisl</a></li>
+								<li><a href="#">Mauris vulputate dolor sit amet nibh</a></li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+			<!-- Main -->
+                        {% endblock%}
+
+                        {%endblock%}
+		</div>
+                                                                        
+                                                                        
+	<!-- /Main -->
+              
+        {% block footer%}
+            
+            <style>
+    
+    section h2{
+        margin-top: 20px
+    }
+    
+</style>
+	<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="3u">
+						<section>
+							<h2>Frase Celebre</h2>
+							<div class="balloon">
+								<blockquote>&ldquo;&nbsp;&nbsp;El derecho es el conjunto de condiciones que permiten a la libertad de cada uno acomodarse a la libertad de todos.&nbsp;&nbsp;&rdquo;<br>
+									<br>
+									<strong>&ndash;&nbsp;&nbsp;Immanuel Kant</strong></blockquote>
+							</div>
+							<div class="ballon-bgbtm">&nbsp;</div>
+						</section>
+					</div>
+					<div class="3u">
+						<section>
+							<h2>Areas de Trabajo</h2>
+							<ul class="default">
+								<li>
+									<h3>Derecho Administrativo y Administración Pública</h3>
+									<p><a href="#">El estudio de la estructura y de la temática principal del derecho administrativo.</a></p>
+								</li>
+								<li>
+									<h3>Derecho Civil</h3>
+									<p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
+								</li>
+								<li>
+									<h3>Derecho Publico</h3>
+									<p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
+								</li>
+							</ul>
+						</section>
+					</div>
+					<div class="3u">
+						<section>
+							<h2>Nuestros Clientes</h2>
+							<p>Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat.</p>
+					
+							<a href="#" class="button">More Collections</a>
+						</section>
+					</div>
+					<div class="3u">
+						<section>
+							<h2>Quienes Somos</h2>
+							<p><strong>Aliquam erat volutpat. Pellentesque tristique ante ut risus. </strong></p>
+							<p>Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit.</p>
+							<p>Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat.</p>
+							<a href="#" class="button">More Collections</a>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- /Footer -->
+        
+
+	<!-- Copyright -->
+		<div id="copyright" class="container">
+			Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+		</div>
+
+        {% endblock %}
+	</body>
+        {% endblock %}
+</html>
+{% endblock %}

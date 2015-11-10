@@ -1,0 +1,17 @@
+bufete_aplicacion:
+    resource: "@BufeteAplicacionBundle/Resources/config/routing.yml"
+    prefix:   /gestion/
+
+admin:
+    path:     /admin
+    defaults: { _controller: "BufeteAplicacionBundle:Admin:index" }
+     
+bufete_main:
+    resource: "@BufeteMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+    

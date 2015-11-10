@@ -1,0 +1,72 @@
+{% extends '::pantallacompleta.html.twig' %}
+
+{% block header %}
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+                                            <a href="#"><img src="{{asset('public/images/lo.png')}}"/></a>
+					</div>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'home' }) }} ">Home</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'quien' }) }}">Quienes Somos</a></li>
+                                                        <li  class="active"><a href=" {{ path('bufete_main_homepage', { 'pagina': 'noticias' }) }}">Noticias</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'asesorias' }) }}">Asesorias en Linea</a></li>
+							<li><a href=" {{ path('bufete_main_homepage', { 'pagina': 'micaso' }) }}">Mi caso</a></li>
+						</ul>
+					</nav>
+
+			</div>
+		</div>
+	<!-- Header -->
+        {% endblock %}
+        
+        
+        {% block page%}
+            
+            
+ 
+       <div id="page">
+				
+			
+            <div id="main" class="container"  style=" margin-top: -9em;">
+                    <div class="row">
+			<div class="12u">
+						
+                                            
+                                            <section>
+							<header>
+                                                            <h2>Noticias</h2>
+                                                            <br><br>
+							</header>
+							
+                                                
+                                                {% for entity in entities %}
+                                                       <header>
+                                                           <div class= 'item_noticia' > 
+                                                            <strong><span class="byline">{{entity.titulo}}</span></strong>
+                                                       </header>
+            
+                                                               <p>{{entity.noticia}}</p>
+                                                               <p>{{ entity.fecha|date("m/d/Y") }} </p> 
+                                                               
+                                               
+                                                
+                                                        </div>
+
+                                                 {% endfor %}       
+						</section>
+                                
+                          </div>         
+                    </div>
+            </div>
+
+        </div>
+{% endblock%}
+
+
+        
